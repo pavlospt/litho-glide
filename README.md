@@ -1,6 +1,8 @@
 # Litho - Glide
 Litho Glide is a Litho compatible library, which provides an Image Component compatible with Glide. Litho-Glide supports a wide part of Glide's functionality. If you notice that anything is missing ping us :)
 
+Inspiration: http://www.jayrambhia.com/blog/android-litho-gifs
+
 ## How to use
 
 Add the following dependency on your app's `build.gradle`:
