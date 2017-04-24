@@ -10,6 +10,14 @@ compile 'com.github.pavlospt:litho-glide:1.0'
 
 Add GlideImage component on your own Component :) 
 
+```java
+GlideImage.create(c)
+    .imageUrl(image)
+    .aspectRatio(aspectRatio)
+    .centerCrop(true)
+    .buildWithLayout();
+```
+
 [Here](https://github.com/pavlospt/litho-glide/blob/master/app/src/main/java/com/github/pavlospt/litho_glide_component_sample/lithography/GlideSingleImageComponentSpec.java) you can find a sample ComponentSpec that uses GlideImage component.
 
 
