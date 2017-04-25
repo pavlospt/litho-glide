@@ -37,15 +37,6 @@ public class GlideImageSpec {
   @PropDefault
   protected static final int crossFadeDuration = DEFAULT_INT_VALUE;
 
-  @PropDefault
-  protected static final int failureImageResId = DEFAULT_INT_VALUE;
-
-  @PropDefault
-  protected static final int fallbackImageResId = DEFAULT_INT_VALUE;
-
-  @PropDefault
-  protected static final int placeholderImageResId = DEFAULT_INT_VALUE;
-
   @OnMeasure
   static void onMeasureLayout(ComponentContext c, ComponentLayout layout, int widthSpec,
       int heightSpec, Size size,
@@ -65,11 +56,8 @@ public class GlideImageSpec {
       @Prop(optional = true) Uri uri, @Prop(optional = true) Integer resourceId,
       @Prop(optional = true) RequestManager glideRequestManager,
       @Prop(optional = true, resType = DRAWABLE) Drawable failureImage,
-      @Prop(optional = true, resType = INT) int failureImageResId,
       @Prop(optional = true, resType = DRAWABLE) Drawable fallbackImage,
-      @Prop(optional = true, resType = INT) int fallbackImageResId,
       @Prop(optional = true, resType = DRAWABLE) Drawable placeholderImage,
-      @Prop(optional = true, resType = INT) int placeholderImageResId,
       @Prop(optional = true) DiskCacheStrategy diskCacheStrategy,
       @Prop(optional = true) RequestListener requestListener,
       @Prop(optional = true) boolean asBitmap, @Prop(optional = true) boolean asGif,
@@ -130,16 +118,8 @@ public class GlideImageSpec {
       request.error(failureImage);
     }
 
-    if (failureImageResId != DEFAULT_INT_VALUE) {
-      request.error(failureImageResId);
-    }
-
     if (fallbackImage != null) {
       request.fallback(fallbackImage);
-    }
-
-    if (fallbackImageResId != DEFAULT_INT_VALUE) {
-      request.fallback(fallbackImageResId);
     }
 
     if (fitCenter) {
@@ -152,10 +132,6 @@ public class GlideImageSpec {
 
     if (placeholderImage != null) {
       request.placeholder(placeholderImage);
-    }
-
-    if (placeholderImageResId != DEFAULT_INT_VALUE) {
-      request.placeholder(placeholderImageResId);
     }
 
     request.skipMemoryCache(skipMemoryCache);
