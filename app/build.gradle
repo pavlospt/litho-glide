@@ -1,12 +1,12 @@
 apply plugin: 'com.android.application'
 
 android {
-  compileSdkVersion 25
-  buildToolsVersion "25.0.2"
+  compileSdkVersion 26
+  buildToolsVersion "26.0.2"
   defaultConfig {
     applicationId "com.github.pavlospt.litho_glide_component_sample"
     minSdkVersion 15
-    targetSdkVersion 25
+    targetSdkVersion 26
     versionCode 1
     versionName "1.0"
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -20,12 +20,13 @@ android {
 }
 
 dependencies {
-  compile 'com.android.support:appcompat-v7:25.3.1'
+  //noinspection GradleCompatible
+  compile 'com.android.support:appcompat-v7:26.1.0'
   compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
   // Litho
   compile 'com.facebook.soloader:soloader:0.2.0'
-  compile 'com.facebook.litho:litho-widget:0.2.0'
-  annotationProcessor 'com.facebook.litho:litho-processor:0.2.0'
+  compile 'com.facebook.litho:litho-widget:0.7.0'
+  annotationProcessor 'com.facebook.litho:litho-processor:0.7.0'
   compile project(':litho-glide')
 }
