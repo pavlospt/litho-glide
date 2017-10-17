@@ -7,7 +7,7 @@ Inspiration: http://www.jayrambhia.com/blog/android-litho-gifs
 
 Add the following dependency on your app's `build.gradle`:
 ```
-compile 'com.github.pavlospt:litho-glide:1.0'
+compile 'com.github.pavlospt:litho-glide:1.2'
 ```
 
 Add GlideImage component on your own Component :) 
