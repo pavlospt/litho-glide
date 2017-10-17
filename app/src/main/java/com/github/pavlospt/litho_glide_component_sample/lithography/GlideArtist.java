@@ -3,7 +3,7 @@ package com.github.pavlospt.litho_glide_component_sample.lithography;
 import android.support.v7.widget.OrientationHelper;
 import com.facebook.litho.Component;
 import com.facebook.litho.ComponentContext;
-import com.facebook.litho.ComponentInfo;
+import com.facebook.litho.widget.ComponentRenderInfo;
 import com.facebook.litho.widget.LinearLayoutInfo;
 import com.facebook.litho.widget.RecyclerBinder;
 
@@ -21,13 +21,12 @@ public class GlideArtist implements ArtistDatum {
     this.images = images;
   }
 
-  @Override
-  public Component createComponent(ComponentContext c) {
-    final RecyclerBinder imageRecyclerBinder =
-        new RecyclerBinder(c, 4.0f, new LinearLayoutInfo(c, OrientationHelper.HORIZONTAL, false));
+  @Override public Component createComponent(ComponentContext c) {
+    final RecyclerBinder imageRecyclerBinder = new RecyclerBinder.Builder().layoutInfo(
+        new LinearLayoutInfo(c, OrientationHelper.HORIZONTAL, false)).build(c);
 
     for (String image : images) {
-      ComponentInfo.Builder imageComponentInfoBuilder = ComponentInfo.create();
+      ComponentRenderInfo.Builder imageComponentInfoBuilder = ComponentRenderInfo.create();
       imageComponentInfoBuilder.component(
           GlideSingleImageComponent.create(c).image(image).aspectRatio(2).build());
       imageRecyclerBinder.insertItemAt(imageRecyclerBinder.getItemCount(),
@@ -37,18 +36,15 @@ public class GlideArtist implements ArtistDatum {
     return FeedItemCard.create(c).artist(this).binder(imageRecyclerBinder).build();
   }
 
-  @Override
-  public String[] getImages() {
+  @Override public String[] getImages() {
     return images;
   }
 
-  @Override
-  public String getBiography() {
+  @Override public String getBiography() {
     return biography;
   }
 
-  @Override
-  public String getName() {
+  @Override public String getName() {
     return name;
   }
 }

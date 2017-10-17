@@ -12,16 +12,16 @@ import com.github.pavlospt.litho.glide.GlideImage;
 public class GlideSingleImageComponentSpec {
 
   @PropDefault
-  protected static final float aspectRatio = 1f;
+  protected static final float imageAspectRatio = 1f;
 
   @OnCreateLayout
   static ComponentLayout onCreateLayout(
       ComponentContext c,
       @Prop String image,
-      @Prop(optional = true) float aspectRatio) {
+      @Prop(optional = true) float imageAspectRatio) {
     return GlideImage.create(c)
         .imageUrl(image)
-        .aspectRatio(aspectRatio)
+        .aspectRatio(imageAspectRatio)
         .centerCrop(true)
         .buildWithLayout();
   }

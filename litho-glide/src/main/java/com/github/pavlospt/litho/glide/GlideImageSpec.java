@@ -32,7 +32,7 @@ public class GlideImageSpec {
   private static final int DEFAULT_INT_VALUE = -1;
 
   @PropDefault
-  protected static final float aspectRatio = 1f;
+  protected static final float imageAspectRatio = 1f;
 
   @PropDefault
   protected static final int crossFadeDuration = DEFAULT_INT_VALUE;
@@ -40,14 +40,13 @@ public class GlideImageSpec {
   @OnMeasure
   static void onMeasureLayout(ComponentContext c, ComponentLayout layout, int widthSpec,
       int heightSpec, Size size,
-      @Prop(optional = true, resType = ResType.FLOAT) float aspectRatio) {
-    MeasureUtils.measureWithAspectRatio(widthSpec, heightSpec, aspectRatio, size);
+      @Prop(optional = true, resType = ResType.FLOAT) float imageAspectRatio) {
+    MeasureUtils.measureWithAspectRatio(widthSpec, heightSpec, imageAspectRatio, size);
   }
 
   @OnCreateMountContent
   static ImageView onCreateMountContent(ComponentContext c) {
-    ImageView imageView = new ImageView(c.getBaseContext());
-    return imageView;
+    return new ImageView(c.getBaseContext());
   }
 
   @OnMount
