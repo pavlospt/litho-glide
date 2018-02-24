@@ -8,23 +8,19 @@
 
 package com.github.pavlospt.litho_glide_component_sample.lithography;
 
-import com.facebook.litho.Row;
-
+import com.facebook.litho.Component;
 import com.facebook.litho.ComponentContext;
-import com.facebook.litho.ComponentLayout;
-
+import com.facebook.litho.Row;
 import com.facebook.litho.annotations.LayoutSpec;
 import com.facebook.litho.annotations.OnCreateLayout;
 import com.facebook.yoga.YogaEdge;
-import com.facebook.yoga.YogaFlexDirection;
 import com.facebook.yoga.YogaPositionType;
-
 
 @LayoutSpec
 public class ActionsComponentSpec {
 
   @OnCreateLayout
-  static ComponentLayout onCreateLayout(
+  static Component onCreateLayout(
       ComponentContext c) {
     return Row.create(c)
         .backgroundColor(0xDDFFFFFF)

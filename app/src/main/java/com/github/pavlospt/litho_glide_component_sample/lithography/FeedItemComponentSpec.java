@@ -9,8 +9,8 @@
 package com.github.pavlospt.litho_glide_component_sample.lithography;
 
 import com.facebook.litho.Column;
+import com.facebook.litho.Component;
 import com.facebook.litho.ComponentContext;
-import com.facebook.litho.ComponentLayout;
 import com.facebook.litho.annotations.LayoutSpec;
 import com.facebook.litho.annotations.OnCreateLayout;
 import com.facebook.litho.annotations.Prop;
@@ -21,7 +21,7 @@ import com.facebook.litho.widget.RecyclerBinder;
 public class FeedItemComponentSpec {
 
   @OnCreateLayout
-  static ComponentLayout onCreateLayout(ComponentContext c, @Prop final ArtistDatum artist,
+  static Component onCreateLayout(ComponentContext c, @Prop final ArtistDatum artist,
       @Prop final RecyclerBinder binder) {
     return Column.create(c)
         .child(Column.create(c)
@@ -33,14 +33,14 @@ public class FeedItemComponentSpec {
         .build();
   }
 
-  private static ComponentLayout.Builder getImageComponent(ComponentContext c,
+  private static Component getImageComponent(ComponentContext c,
       ArtistDatum artistDatum) {
     String imageUrl = artistDatum.getImages()[0];
-    return GlideSingleImageComponent.create(c).image(imageUrl).aspectRatio(2).withLayout();
+    return GlideSingleImageComponent.create(c).image(imageUrl).aspectRatio(2).build();
   }
 
-  private static ComponentLayout.Builder getRecyclerComponent(ComponentContext c,
+  private static Component getRecyclerComponent(ComponentContext c,
       RecyclerBinder binder) {
-    return Recycler.create(c).binder(binder).withLayout().flexShrink(0).aspectRatio(2);
+    return Recycler.create(c).binder(binder).flexShrink(0).aspectRatio(2).build();
   }
 }

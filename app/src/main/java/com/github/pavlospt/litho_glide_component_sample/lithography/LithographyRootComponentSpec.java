@@ -8,8 +8,8 @@
 
 package com.github.pavlospt.litho_glide_component_sample.lithography;
 
+import com.facebook.litho.Component;
 import com.facebook.litho.ComponentContext;
-import com.facebook.litho.ComponentLayout;
 import com.facebook.litho.annotations.LayoutSpec;
 import com.facebook.litho.annotations.OnCreateLayout;
 import com.facebook.litho.annotations.Prop;
@@ -21,7 +21,7 @@ import com.facebook.yoga.YogaEdge;
 
   private static final String MAIN_SCREEN = "main_screen";
 
-  @OnCreateLayout static ComponentLayout onCreateLayout(ComponentContext c,
+  @OnCreateLayout static Component onCreateLayout(ComponentContext c,
       @Prop final RecyclerBinder recyclerBinder) {
 
     return Recycler.create(c)
@@ -29,6 +29,6 @@ import com.facebook.yoga.YogaEdge;
         .flexShrink(0)
         .paddingDip(YogaEdge.TOP, 8)
         .testKey(MAIN_SCREEN)
-        .buildWithLayout();
+        .build();
   }
 }

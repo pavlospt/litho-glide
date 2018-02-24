@@ -26,9 +26,9 @@ dependencies {
 
   // Litho
   implementation 'com.facebook.soloader:soloader:0.2.0'
-  implementation 'com.facebook.litho:litho-widget:0.7.0'
-  implementation 'com.facebook.litho:litho-annotations:0.7.0'
-  implementation 'com.facebook.litho:litho-core:0.7.0'
-  annotationProcessor 'com.facebook.litho:litho-processor:0.7.0'
+  implementation 'com.facebook.litho:litho-widget:0.12.0'
+  implementation 'com.facebook.litho:litho-annotations:0.12.0'
+  implementation 'com.facebook.litho:litho-core:0.12.0'
+  annotationProcessor 'com.facebook.litho:litho-processor:0.12.0'
   implementation project(':litho-glide')
 }

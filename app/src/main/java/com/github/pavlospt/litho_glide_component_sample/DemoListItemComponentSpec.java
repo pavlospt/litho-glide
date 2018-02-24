@@ -8,23 +8,19 @@
 
 package com.github.pavlospt.litho_glide_component_sample;
 
-import com.facebook.litho.Column;
-
-import com.facebook.yoga.YogaAlign;
-
 import android.content.Intent;
 import android.view.View;
-
 import com.facebook.litho.ClickEvent;
+import com.facebook.litho.Column;
+import com.facebook.litho.Component;
 import com.facebook.litho.ComponentContext;
-import com.facebook.litho.ComponentLayout;
-
 import com.facebook.litho.annotations.FromEvent;
 import com.facebook.litho.annotations.LayoutSpec;
 import com.facebook.litho.annotations.OnCreateLayout;
 import com.facebook.litho.annotations.OnEvent;
 import com.facebook.litho.annotations.Prop;
 import com.facebook.litho.widget.Text;
+import com.facebook.yoga.YogaAlign;
 
 import static com.facebook.yoga.YogaEdge.ALL;
 
@@ -32,7 +28,7 @@ import static com.facebook.yoga.YogaEdge.ALL;
 public class DemoListItemComponentSpec {
 
   @OnCreateLayout
-  static ComponentLayout onCreateLayout(
+  static Component onCreateLayout(
       ComponentContext c,
       @Prop final String name) {
     return Column.create(c).flexShrink(0).alignContent(YogaAlign.FLEX_START)

@@ -9,6 +9,7 @@
 package com.github.pavlospt.litho_glide_component_sample.lithography;
 
 import com.facebook.litho.Column;
+import com.facebook.litho.Component;
 import com.facebook.litho.ComponentContext;
 import com.facebook.litho.ComponentLayout;
 import com.facebook.litho.annotations.LayoutSpec;
@@ -25,7 +26,7 @@ import static com.facebook.yoga.YogaEdge.VERTICAL;
 public class FeedItemCardSpec {
 
   @OnCreateLayout
-  static ComponentLayout onCreateLayout(ComponentContext c, @Prop final ArtistDatum artist, @Prop final RecyclerBinder binder) {
+  static Component onCreateLayout(ComponentContext c, @Prop final ArtistDatum artist, @Prop final RecyclerBinder binder) {
     return Column.create(c)
         .flexShrink(0)
         .alignContent(YogaAlign.FLEX_START)

@@ -26,7 +26,7 @@ import java.util.Map;
  */
 public final class Demos {
 
-  private static Map<String, Component<?>> demoModels;
+  private static Map<String, Component> demoModels;
 
   private Demos() {
   }
@@ -43,7 +43,7 @@ public final class Demos {
     demoModels.put("Playground", PlaygroundComponent.create(c).build());
   }
 
-  public static Component<?> getComponent(String name) {
+  public static Component getComponent(String name) {
     return demoModels.get(name);
   }
 

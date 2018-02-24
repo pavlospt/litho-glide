@@ -8,24 +8,21 @@
 
 package com.github.pavlospt.litho_glide_component_sample.lithography;
 
-import com.facebook.litho.Row;
-
+import com.facebook.litho.Component;
 import com.facebook.litho.ComponentContext;
-import com.facebook.litho.ComponentLayout;
-
+import com.facebook.litho.Row;
 import com.facebook.litho.annotations.LayoutSpec;
 import com.facebook.litho.annotations.OnCreateLayout;
 import com.facebook.litho.annotations.Prop;
 import com.facebook.litho.widget.Text;
 import com.facebook.yoga.YogaAlign;
 import com.facebook.yoga.YogaEdge;
-import com.facebook.yoga.YogaFlexDirection;
 
 @LayoutSpec
 public class DecadeSeparatorSpec {
 
   @OnCreateLayout
-  static ComponentLayout onCreateLayout(
+  static Component onCreateLayout(
       ComponentContext c,
       @Prop final Decade decade) {
     return Row.create(c)
@@ -41,7 +38,6 @@ public class DecadeSeparatorSpec {
                 .text(String.valueOf(decade.year))
                 .textSizeDip(14)
                 .textColor(0xFFAAAAAA)
-                .withLayout()
                 .marginDip(YogaEdge.HORIZONTAL, 10)
                 .flex(0))
         .child(

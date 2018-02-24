@@ -1,7 +1,7 @@
 package com.github.pavlospt.litho_glide_component_sample.lithography;
 
+import com.facebook.litho.Component;
 import com.facebook.litho.ComponentContext;
-import com.facebook.litho.ComponentLayout;
 import com.facebook.litho.annotations.LayoutSpec;
 import com.facebook.litho.annotations.OnCreateLayout;
 import com.facebook.litho.annotations.Prop;
@@ -15,7 +15,7 @@ public class GlideSingleImageComponentSpec {
   protected static final float imageAspectRatio = 1f;
 
   @OnCreateLayout
-  static ComponentLayout onCreateLayout(
+  static Component onCreateLayout(
       ComponentContext c,
       @Prop String image,
       @Prop(optional = true) float imageAspectRatio) {
@@ -23,6 +23,6 @@ public class GlideSingleImageComponentSpec {
         .imageUrl(image)
         .aspectRatio(imageAspectRatio)
         .centerCrop(true)
-        .buildWithLayout();
+        .build();
   }
 }
