@@ -7,7 +7,7 @@ Inspiration: http://www.jayrambhia.com/blog/android-litho-gifs
 
 Add the following dependency on your app's `build.gradle`:
 ```
-compile 'com.github.pavlospt:litho-glide:1.2'
+compile 'com.github.pavlospt:litho-glide:1.3'
 ```
 
 Add GlideImage component on your own Component :) 
@@ -17,7 +17,7 @@ GlideImage.create(c)
     .imageUrl(image)
     .aspectRatio(aspectRatio)
     .centerCrop(true)
-    .buildWithLayout();
+    .build();
 ```
 
 [Here](https://github.com/pavlospt/litho-glide/blob/master/app/src/main/java/com/github/pavlospt/litho_glide_component_sample/lithography/GlideSingleImageComponentSpec.java) you can find a sample ComponentSpec that uses GlideImage component.
