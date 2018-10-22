@@ -7,8 +7,8 @@ android {
   defaultConfig {
     minSdkVersion 15
     targetSdkVersion 27
-    versionCode 5
-    versionName "1.4"
+    versionCode 6
+    versionName "1.5"
   }
 }
 
@@ -27,7 +27,7 @@ dependencies {
 ext {
   PUBLISH_GROUP_ID = 'com.github.pavlospt'
   PUBLISH_ARTIFACT_ID = 'litho-glide'
-  PUBLISH_VERSION = '1.4'
+  PUBLISH_VERSION = '1.5'
 }
 
 //apply from: 'https://raw.githubusercontent.com/ArthurHub/release-android-library/master/android-release-aar.gradle'
