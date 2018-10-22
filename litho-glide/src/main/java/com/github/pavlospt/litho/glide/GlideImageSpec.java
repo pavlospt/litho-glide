@@ -1,5 +1,6 @@
 package com.github.pavlospt.litho.glide;
 
+import android.content.Context;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.widget.ImageView;
@@ -24,7 +25,6 @@ import com.facebook.litho.utils.MeasureUtils;
 import java.io.File;
 
 import static com.facebook.litho.annotations.ResType.DRAWABLE;
-import static com.facebook.litho.annotations.ResType.INT;
 
 @MountSpec
 public class GlideImageSpec {
@@ -45,8 +45,8 @@ public class GlideImageSpec {
   }
 
   @OnCreateMountContent
-  static ImageView onCreateMountContent(ComponentContext c) {
-    return new ImageView(c.getBaseContext());
+  static ImageView onCreateMountContent(Context c) {
+    return new ImageView(c);
   }
 
   @OnMount
