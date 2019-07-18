@@ -29,6 +29,6 @@ ext {
   PUBLISH_VERSION = '1.6'
 }
 
-//apply from: 'https://raw.githubusercontent.com/ArthurHub/release-android-library/master/android-release-aar.gradle'
+//apply from: 'https://raw.githubusercontent.com/pavlospt/release-android-library/master/android-release-aar.gradle'
 
-//apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
