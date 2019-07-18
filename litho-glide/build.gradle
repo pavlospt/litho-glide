@@ -6,27 +6,27 @@ android {
   defaultConfig {
     minSdkVersion 15
     targetSdkVersion 28
-    versionCode 6
-    versionName "1.5"
+    versionCode 7
+    versionName "1.6"
   }
 }
 
 tasks.withType(Javadoc).all { enabled = false }
 
 dependencies {
-  implementation 'com.facebook.litho:litho-annotations:0.20.0'
-  implementation 'com.facebook.litho:litho-core:0.20.0'
-  annotationProcessor 'com.facebook.litho:litho-processor:0.20.0'
+  implementation 'com.facebook.litho:litho-annotations:0.28.0'
+  implementation 'com.facebook.litho:litho-core:0.28.0'
+  annotationProcessor 'com.facebook.litho:litho-processor:0.28.0'
 
   implementation 'com.github.bumptech.glide:glide:3.8.0'
   //noinspection GradleCompatible
-  implementation 'com.android.support:support-fragment:28.0.0'
+  implementation 'androidx.fragment:fragment:1.0.0'
 }
 
 ext {
   PUBLISH_GROUP_ID = 'com.github.pavlospt'
   PUBLISH_ARTIFACT_ID = 'litho-glide'
-  PUBLISH_VERSION = '1.5'
+  PUBLISH_VERSION = '1.6'
 }
 
 //apply from: 'https://raw.githubusercontent.com/ArthurHub/release-android-library/master/android-release-aar.gradle'
