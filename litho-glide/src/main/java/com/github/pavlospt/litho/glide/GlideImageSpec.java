@@ -70,7 +70,7 @@ public class GlideImageSpec {
     }
 
     if (glideRequestManager == null) {
-      glideRequestManager = Glide.with(c.getBaseContext());
+      glideRequestManager = Glide.with(c.getAndroidContext());
     }
 
     DrawableTypeRequest request;

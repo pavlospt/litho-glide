@@ -9,7 +9,7 @@
 package com.github.pavlospt.litho_glide_component_sample;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.facebook.litho.ComponentContext;
 import com.facebook.litho.LithoView;
