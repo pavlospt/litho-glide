@@ -36,7 +36,7 @@ public class FeedItemComponentSpec {
   private static Component getImageComponent(ComponentContext c,
       ArtistDatum artistDatum) {
     String imageUrl = artistDatum.getImages()[0];
-    return GlideSingleImageComponent.create(c).image(imageUrl).aspectRatio(2).build();
+    return GlideSingleImageComponent.create(c).image(imageUrl).imageAspectRatio(2).build();
   }
 
   private static Component getRecyclerComponent(ComponentContext c,

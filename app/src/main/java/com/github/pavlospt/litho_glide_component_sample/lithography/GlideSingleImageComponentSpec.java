@@ -21,7 +21,7 @@ public class GlideSingleImageComponentSpec {
       @Prop(optional = true) float imageAspectRatio) {
     return GlideImage.create(c)
         .imageUrl(image)
-        .aspectRatio(imageAspectRatio)
+        .imageAspectRatio(imageAspectRatio)
         .centerCrop(true)
         .build();
   }
