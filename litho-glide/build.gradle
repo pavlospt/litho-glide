@@ -18,7 +18,7 @@ dependencies {
   implementation 'com.facebook.litho:litho-core:0.28.0'
   annotationProcessor 'com.facebook.litho:litho-processor:0.28.0'
 
-  implementation 'com.github.bumptech.glide:glide:3.8.0'
+  implementation 'com.github.bumptech.glide:glide:4.11.0'
   //noinspection GradleCompatible
   implementation 'androidx.fragment:fragment:1.0.0'
 }

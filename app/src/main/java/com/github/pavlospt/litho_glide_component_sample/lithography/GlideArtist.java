@@ -28,7 +28,7 @@ public class GlideArtist implements ArtistDatum {
     for (String image : images) {
       ComponentRenderInfo.Builder imageComponentInfoBuilder = ComponentRenderInfo.create();
       imageComponentInfoBuilder.component(
-          GlideSingleImageComponent.create(c).image(image).aspectRatio(2).build());
+          GlideSingleImageComponent.create(c).image(image).imageAspectRatio(2).build());
       imageRecyclerBinder.insertItemAt(imageRecyclerBinder.getItemCount(),
           imageComponentInfoBuilder.build());
     }
